@@ -1,0 +1,27 @@
+#  The contact options.
+
+- type: github
+  icon: "fab fa-github"
+
+- type: twitter
+  icon: "fa-brands fa-x-twitter"
+
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
+
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/cl%C3%A9ment-piasco/"
+
+- type: tryhackme
+  icon: "fab fa-cloudversify"
+  url: "https://tryhackme.com/r/p/fox.one"
+
+- type: hackthebox
+  icon: "fas fa-cube"
+  url: "https://app.hackthebox.com/profile/2025663"

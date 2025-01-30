@@ -26,9 +26,11 @@ For this simple subject, you won't need much :
 
 - A computer, preferably running Linux (it should work on Windows as well, but I can't test that right now)
 - A C compiler (we will use GCC most of the time, but you should have the same kind of results if you use CLang, or others)
-- The desire to learn about low level exploitation !
+- The desire to learn low level exploitation !
 
 ---
+
+## Setup
 
 Okay, let's start with the setup.
 
@@ -83,6 +85,8 @@ Wow, that's a lot of code !
 Let's first understand what it does, and then start exploiting it !
 
 ---
+
+# Code explanation
 
 First, this is C code.
 
@@ -170,6 +174,8 @@ But, if we look 3 lines under that struct, we can see
 gets(remote_user.username);
 ```
 
+## Vulnerability
+
 `gets` is a deprecated C function.
 
 It retreive characters from STDIN (the standard input, in our case... our terminal) and put them in the given variable.
@@ -183,9 +189,9 @@ What that means, is that, if we were to put 99 characters, it'll write 99 charac
 > But `remote_user.username` is only 64 characters long, what will happend ?
 {: .prompt-info }
 
-Well, it'll _overflow_ a _buffer_. It's in the name. **Buffer Overflow** !
+Well, it'll _overflow_ the _buffer_. It's in the name. **Buffer Overflow** !
 
-In fact, i'll overflow into the next variable, which is `remote_user.is_admin`.
+In fact, it'll overflow into the next variable, which is `remote_user.is_admin`.
 
 By putting random characters into `remote_user.is_admin`, it'll make it's _int_ value a random value.
 
@@ -195,25 +201,27 @@ Let's do it !
 
 ---
 
+## Testing
+
 First, we will need to compile our code.
 
 For that, edit a file using your text editor of choice. For me it'll be vim (learning vim is a real gain in any IT job, in my opinion)
 
-![Creating the file](/assets/img/posts/research/low_level/create_the_file.gif)
+![Creating the file](/assets/img/posts/research/low_level/simple_buffer_overflow/create_the_file.gif)
 _Copy the code into a file_
 
 Once that's done, we need to compile it.
 
 To do so, we will use GCC
 
-![Compiling the file](/assets/img/posts/research/low_level/compile_the_file.gif)
+![Compiling the file](/assets/img/posts/research/low_level/simple_buffer_overflow/compile_the_file.gif)
 _Compiling the C file into an executable_
 
 As you can see, even GCC warns you that the `gets` function is dangerous and should not be used.
 
 Well, now that we have our `main` executable file, let's run it, and see how it does !
 
-![Running the file](/assets/img/posts/research/low_level/running_the_file.gif)
+![Running the file](/assets/img/posts/research/low_level/simple_buffer_overflow/running_the_file.gif)
 _Running the file with random data_
 
 Well, with small number of characters, the access is denied.
@@ -222,7 +230,9 @@ As stated, if we put more than 64 characters, it should also write into the `is_
 
 Let's try this !
 
-![Exploiting the file](/assets/img/posts/research/low_level/exploiting_the_file.gif)
+## Exploiting
+
+![Exploiting the file](/assets/img/posts/research/low_level/simple_buffer_overflow/exploiting_the_file.gif)
 _Exploiting the file_
 
 As you can see, we successfully executed the `authorize_shell` function.

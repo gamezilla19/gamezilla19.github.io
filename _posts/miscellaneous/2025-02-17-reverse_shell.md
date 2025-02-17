@@ -96,7 +96,7 @@ First things first, we will dive into how we can setup a revshell.
 
 For that, we will first need to find our IP address.
 
-For that, we will be using the command `ifconfig`
+We will be using the command `ifconfig`
 
 ![Output of command ifconfig](/assets/img/posts/miscellaneous/reverse_shell/ifconfig.png){: .w-75 .shadow .rounded-10 }
 _Running ifconfig to retreive our IP address_
@@ -416,7 +416,7 @@ You now ran a really long command, which runs a lot of tests and stuff.
 
 But, you want to change one parameter.
 
-By pressing one of the arrow keys, you should see on of
+By pressing one of the arrow keys, you should see one of
 
 ```
 ^[[A

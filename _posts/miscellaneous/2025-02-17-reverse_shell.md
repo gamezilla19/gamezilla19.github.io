@@ -220,7 +220,7 @@ _We run the perl payload on the DVWA machine_
 
 We can see that, when running the payload, our browser freezes, and something happens on our listener
 
-<a name="receiving-revshell"></a>
+<a name="receiving-revshell" href="#"></a>
 
 ![Receiving the shell on our listener](/assets/img/posts/miscellaneous/reverse_shell/receiving_the_shell.gif){: .w-75 .shadow .rounded-10 }
 _We receive a connection on our listener_

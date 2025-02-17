@@ -13,7 +13,7 @@ mermaid: true
 
 ## Welcome !
 
-Today, we will dive into the world of Low Level Exploitation.
+Today, we will dive into the world of low-level exploitation.
 
 For this introduction, we will break into a simple C program containing a simple vulnerability.
 
@@ -26,7 +26,7 @@ For this simple subject, you won't need much :
 
 - A computer, preferably running Linux (it should work on Windows as well, but I can't test that right now)
 - A C compiler (we will use GCC most of the time, but you should have the same kind of results if you use CLang, or others)
-- The desire to learn low level exploitation !
+- The desire to learn low-level exploitation !
 
 ---
 
@@ -90,13 +90,13 @@ Let's first understand what it does, and then start exploiting it !
 
 First, this is C code.
 
-As a low level exploiter, this is a language you should familiarise yourself with.
+As a low-level exploiter, this is a language you should familiarize yourself with.
 
 We will also look at assembly code, but this will be a bit later.
 
-At the begining of the code, we see some `#include` statements.
+At the beginning of the code, we see some `#include` statements.
 
-These simply retreive code from other files (here `stdio.h` and `stdlib.h`), and add them to your code.
+These simply retrieve code from other files (here `stdio.h` and `stdlib.h`), and add them to your code.
 
 > But, there is no `stdio.h` or `stdlib.h` file here ! Where are them ?
 {: .prompt-info }
@@ -166,7 +166,7 @@ Were is_admin is put right after username.
 > And, why is it usefull ?
 {: .prompt-info }
 
-By itself, there is nothing intresting here.
+By itself, there is nothing interesting here.
 
 But, if we look 3 lines under that struct, we can see
 
@@ -178,15 +178,15 @@ gets(remote_user.username);
 
 `gets` is a deprecated C function.
 
-It retreive characters from STDIN (the standard input, in our case... our terminal) and put them in the given variable.
+It retrieve characters from STDIN (the standard input, in our case... our terminal) and put them in the given variable.
 
-So, if everything goes well, `gets` should just retreive at most 64 chars from the terminal input, and put them into the username, right ? Nothing bad can happend, right ?
+So, if everything goes well, `gets` should just retrieve at most 64 chars from the terminal input, and put them into the username, right ? Nothing bad can happen, right ?
 
 Well, turns out, gets doesn't have limits on reading size.
 
 What that means, is that, if we were to put 99 characters, it'll write 99 characters onto `remote_user.username`.
 
-> But `remote_user.username` is only 64 characters long, what will happend ?
+> But `remote_user.username` is only 64 characters long, what will happen ?
 {: .prompt-info }
 
 Well, it'll _overflow_ the _buffer_. It's in the name. **Buffer Overflow** !
@@ -207,21 +207,21 @@ First, we will need to compile our code.
 
 For that, edit a file using your text editor of choice. For me it'll be vim (learning vim is a real gain in any IT job, in my opinion)
 
-![Creating the file](/assets/img/posts/research/low_level/simple_buffer_overflow/create_the_file.gif)
+![Creating the file](/assets/img/posts/research/low_level/simple_buffer_overflow/create_the_file.gif){: .w-75 .shadow .rounded-10 }
 _Copy the code into a file_
 
 Once that's done, we need to compile it.
 
 To do so, we will use GCC
 
-![Compiling the file](/assets/img/posts/research/low_level/simple_buffer_overflow/compile_the_file.gif)
+![Compiling the file](/assets/img/posts/research/low_level/simple_buffer_overflow/compile_the_file.gif){: .w-75 .shadow .rounded-10 }
 _Compiling the C file into an executable_
 
 As you can see, even GCC warns you that the `gets` function is dangerous and should not be used.
 
 Well, now that we have our `main` executable file, let's run it, and see how it does !
 
-![Running the file](/assets/img/posts/research/low_level/simple_buffer_overflow/running_the_file.gif)
+![Running the file](/assets/img/posts/research/low_level/simple_buffer_overflow/running_the_file.gif){: .w-75 .shadow .rounded-10 }
 _Running the file with random data_
 
 Well, with small number of characters, the access is denied.
@@ -232,7 +232,7 @@ Let's try this !
 
 ## Exploiting
 
-![Exploiting the file](/assets/img/posts/research/low_level/simple_buffer_overflow/exploiting_the_file.gif)
+![Exploiting the file](/assets/img/posts/research/low_level/simple_buffer_overflow/exploiting_the_file.gif){: .w-75 .shadow .rounded-10 }
 _Exploiting the file_
 
 As you can see, we successfully executed the `authorize_shell` function.

@@ -6,7 +6,7 @@ categories: [Research, LowLevel]
 comments: true
 toc: true
 pin: false
-tags: [low_level]
+tags: [research, linux, c, buffer_overflow]
 math: true
 mermaid: true
 ---

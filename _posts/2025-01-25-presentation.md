@@ -6,7 +6,7 @@ categories: [Presentation]
 comments: false
 toc: false
 pin: true
-tags: [presentation]
+tags: [init]
 ---
 
 # Hello there !

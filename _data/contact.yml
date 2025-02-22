@@ -18,6 +18,10 @@
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/cl%C3%A9ment-piasco/"
 
+- type: rootme
+  icon: "fab fa-skull"
+  url: "https://www.root-me.org/442policeman-436580"
+
 - type: tryhackme
   icon: "fab fa-cloudversify"
   url: "https://tryhackme.com/r/p/fox.one"

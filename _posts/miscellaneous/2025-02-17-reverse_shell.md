@@ -273,7 +273,7 @@ If that's a question you really asked yourself, that's really good !
 
 In fact, we were able to access it on our browser using the IP `127.0.0.1` (and port `4280`) only thanks to docker.
 
-In fact, if you paste the IP of your revshell (in my case `172.18.0.3`) onto your web browser, you should see the exact same DVWA interface.
+If you paste the IP of your revshell (in my case `172.18.0.3`) onto your web browser, you should see the exact same DVWA interface.
 
 ![Accessing DVWA through the container IP](/assets/img/posts/miscellaneous/reverse_shell/accessing_target_through_another_ip.png){: .w-75 .shadow .rounded-10 }
 _We can access the website through another IP_

@@ -280,7 +280,7 @@ _We can access the website through another IP_
 
 Docker just _forwards_ the connection to our `127.0.0.1` IP on port `4280`.
 
-There is no need to dive too deep inside this, let's focus on our bind shell.
+There is no need to dive too deep on this, let's focus on our bind shell.
 
 Going back to [https://revshells.com](https://revshells.com), we can check out the `Bind` tab, and see that there are a lot less payloads.
 
@@ -488,4 +488,6 @@ If you are in a CTF, or you don't care about hiding yourself, I advise you to sp
 ![Process tree](/assets/img/posts/miscellaneous/reverse_shell/pstree.png){: .w-75 .shadow .rounded-10 }
 _Process tree, through custom script_
 
-This is so if you write `exit`, or press `Ctrl+D` by mistake, you don't need to re execute the remote shell.
+This is so if you type `exit`, or press `Ctrl+D` by mistake, you have a safety nest.
+
+You simply have to run bash within itself multiple times for that, no need to re-do the reverse shell each time &#128521;

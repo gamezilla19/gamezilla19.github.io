@@ -1,7 +1,7 @@
 ---
 title: Presentation
 author: tech0ne
-date: 2025-04-03 15:00:00 +0100
+date: 2025-04-03 14:30:00 Z
 categories: [Presentation]
 comments: false
 toc: false

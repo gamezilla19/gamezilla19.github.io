@@ -184,7 +184,7 @@ So, if everything goes well, `gets` should just retrieve at most 64 chars from t
 
 Well, turns out, gets doesn't have limits on reading size.
 
-What that means, is that, if we were to put 99 characters, it'll write 99 characters onto `remote_user.username`.
+What it means is that, if we were to put 99 characters, it'll write 99 characters onto `remote_user.username`.
 
 > But `remote_user.username` is only 64 characters long, what will happen ?
 {: .prompt-info }

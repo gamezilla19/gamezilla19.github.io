@@ -4,31 +4,30 @@ lang: en
 
 timezone: Europe/Paris
 
-title: Tech0ne
+title: Gamezilla19
 
 tagline: Cyber-Security Student
 
 description: >-
   Cyber security and IT blog.
 
-url: "https://Tech0ne.github.io"
+url: "https://gamezilla19.github.io"
 
 github:
-  username: tech0ne
+  username: Gamezilla19
 
 twitter:
-  username: such_a_rndm_usr
+  username: Gamezilla191
 
 social:
-  name: Tech0ne
-  email: This.Is.Tech.0ne@protonmail.com
+  name: Gamezilla19
+  email: None
   links:
     - https://twitter.com/such_a_rndm_usr
-    - https://github.com/Tech0ne
-    - https://www.linkedin.com/in/cl%C3%A9ment-piasco/
-    - https://www.root-me.org/442policeman-436580
-    - https://tryhackme.com/r/p/fox.one
-    - https://app.hackthebox.com/profile/2025663
+    - https://github.com/gamezilla19
+    - https://www.linkedin.com/in/hugo-hajdarevic-b007a0222/
+    - https://www.root-me.org/Gamezilla
+    - https://tryhackme.com/p/Gamezilla
 
 webmaster_verifications:
   google:
@@ -61,7 +60,7 @@ theme_mode:
 
 cdn:
 
-avatar: "https://github.com/Tech0ne.png"
+avatar: "https://github.com/gamezilla19.png"
 
 social_preview_image:
 
@@ -70,7 +69,7 @@ toc: true
 comments:
   provider: "giscus"
   giscus:
-    repo: "tech0ne/comments"
+    repo: "gamezilla19/comments"
     repo_id: "R_kgDONu6dUw"
     category: General
     category_id: DIC_kwDONu6dU84CmTo4

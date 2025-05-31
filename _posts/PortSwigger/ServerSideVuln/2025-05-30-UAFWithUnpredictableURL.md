@@ -31,9 +31,11 @@ In some cases, sensitive functionality is concealed by giving it a less predicta
 Imagine an application that hosts administrative functions at the following URL:
 
 https://insecure-website.com/administrator-panel-yb556
+
 This might not be directly guessable by an attacker. However, the application might still leak the URL to users. The URL might be disclosed in JavaScript that constructs the user interface based on the user's role:
 
-```<script>
+```java
+<script>
 	var isAdmin = false;
 	if (isAdmin) {
 		...
@@ -42,7 +44,8 @@ This might not be directly guessable by an attacker. However, the application mi
 		adminPanelTag.innerText = 'Admin panel';
 		...
 	}
-</script>```
+</script>
+```
 This script adds a link to the user's UI if they are an admin user. However, the script containing the URL is visible to all users regardless of their role.
 ---
 
@@ -53,7 +56,8 @@ As the course explains it to us, as we arrive on the website, we want to try to 
 
 ![console](/assets/img/posts/PortSwigger/ServerSideVulnerabilities/UAFWUURL/console.png)
 
-```var isAdmin = false;
+```java
+var isAdmin = false;
 if (isAdmin) {
    var topLinksTag = document.getElementsByClassName("top-links")[0];
    var adminPanelTag = document.createElement('a');
@@ -62,7 +66,8 @@ if (isAdmin) {
    topLinksTag.append(adminPanelTag);
    var pTag = document.createElement('p');
    pTag.innerText = '|';
-   topLinksTag.appendChild(pTag);```
+   topLinksTag.appendChild(pTag);
+```
 
 We then want to see what is the administrator-panel about : 
 

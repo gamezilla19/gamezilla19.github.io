@@ -1,15 +1,14 @@
 ---
-title: PortSwigger - Lab: Unprotected admin functionality
+title: Unprotected Admin Functionality
 author: Gamezilla
 date: 2025-05-30 14:00:00 +0100
-categories: [Server-side Vulnerabilities]
+categories: [PortSwigger]
 comments: false
 toc: false
 pin: false
-tags: [PortSwigger, Burp, Burpsuite, Courses]
+tags: [portswigger, burp, burpsuite, SSV, courses]
 math: false
 mermaid: false
-
 ---
 
 ## 1. Statement

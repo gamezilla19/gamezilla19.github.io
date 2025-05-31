@@ -1,4 +1,4 @@
----More actions
+---
 title: PortSwigger - Lab: Unprotected admin functionality
 author: Gamezilla
 date: 2025-05-30 14:00:00 +0100

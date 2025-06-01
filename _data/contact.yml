@@ -16,16 +16,16 @@
 
 - type: linkedin
   icon: "fab fa-linkedin"
-  url: "https://www.linkedin.com/in/cl%C3%A9ment-piasco/"
+  url: "https://www.linkedin.com/in/hugo-hajdarevic-b007a0222/"
 
 - type: rootme
   icon: "fas fa-skull"
-  url: "https://www.root-me.org/442policeman-436580"
+  url: "https://www.root-me.org/[YOUR ROOTME ACCOUNT]"
 
 - type: tryhackme
   icon: "fab fa-cloudversify"
-  url: "https://tryhackme.com/r/p/fox.one"
+  url: "https://tryhackme.com/r/p/[YOUR THM ACCOUNT]"
 
 - type: hackthebox
   icon: "fas fa-cube"
-  url: "https://app.hackthebox.com/profile/2025663"
+  url: "https://app.hackthebox.com/profile/[YOUR HTB ACCOUNT]"

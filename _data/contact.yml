@@ -20,12 +20,12 @@
 
 - type: rootme
   icon: "fas fa-skull"
-  url: "https://www.root-me.org/442policeman-436580"
+  url: "https://www.root-me.org/Gamezilla19"
 
 - type: tryhackme
   icon: "fab fa-cloudversify"
-  url: "https://tryhackme.com/r/p/fox.one"
+  url: "https://tryhackme.com/p/Gamezilla19"
 
-- type: hackthebox
-  icon: "fas fa-cube"
-  url: "https://app.hackthebox.com/profile/2025663"
+#- type: hackthebox
+#  icon: "fas fa-cube"
+#  url: "https://app.hackthebox.com/profile/2025663"
